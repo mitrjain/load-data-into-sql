@@ -137,7 +137,7 @@ CREATE TABLE emails (
 
 TABLES['matches'] = (""" 
 CREATE TABLE matches (
-    matches_email_id INT PRIMARY KEY, 
+    matches_email_id INT, 
     matches_question_id VARCHAR(50), 
     FOREIGN KEY (matches_email_id) REFERENCES emails (emails_id),
     FOREIGN KEY (matches_question_id) REFERENCES questions (questions_id)
