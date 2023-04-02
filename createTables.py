@@ -147,7 +147,7 @@ CREATE TABLE matches (
 for table in TABLES:
 
   query = TABLES[table]
-  print("Executing: ",query)
+  print("Creating table: ",table)
   mycursor.execute(query)
   for x in mycursor:
     print(x)
