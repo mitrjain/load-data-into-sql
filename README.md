@@ -16,7 +16,13 @@ This repository contains the source code of loading the CareerVillage dataset in
 - `createDB.py` : python script to load csv file data into tables
 
 ## Running the application
-Execute the following command
+Steps to run this application
+- Set up envornment varaibles file `.env` in the same directory as this readme
+```
+DB_USER=""
+DB_PWD=""
+```
+- Execute the following command
 
 `./execute.sh`
 
