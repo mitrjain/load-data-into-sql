@@ -1,9 +1,16 @@
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+dbUser = os.environ.get("DB_USER")
+dbPwd = os.environ.get("DB_PWD")
 
 mydb = mysql.connector.connect(
   host="localhost",
-  user="root",
-  password="testroot",
+  user=dbUser,
+  password=dbPwd,
 )
 
 mycursor = mydb.cursor()
