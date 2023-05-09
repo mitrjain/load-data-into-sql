@@ -143,13 +143,32 @@ CREATE TABLE matches (
     FOREIGN KEY (matches_question_id) REFERENCES questions (questions_id)
     )
 """)
+                     
+TABLES['question_scores'] = (""" 
+CREATE TABLE question_scores (
+    id VARCHAR(50) PRIMARY KEY , 
+    score INT,
+    FOREIGN KEY (id) REFERENCES questions (questions_id))
+""")   
+
+TABLES['answer_scores'] = (""" 
+CREATE TABLE answer_scores (
+    id VARCHAR(50) PRIMARY KEY , 
+    score INT,
+    FOREIGN KEY (id) REFERENCES answers (answers_id))
+""")
 
 for table in TABLES:
 
   query = TABLES[table]
   print("Creating table: ",table)
+  print("Executing query: ",query)
   mycursor.execute(query)
   for x in mycursor:
     print(x)
+
+mydb.commit()
+
+
 
 

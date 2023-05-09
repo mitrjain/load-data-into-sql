@@ -11,6 +11,7 @@ mycursor = mydb.cursor()
 try:
     mycursor.execute("DROP DATABASE MAC")
 except:
-    print("No need to delete any database as i doesn't exists")
+    print("No need to delete any database as it doesn't exists")
 
 mycursor.execute("CREATE DATABASE MAC")
+
