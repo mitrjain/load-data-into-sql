@@ -5,7 +5,9 @@ This repository contains the source code of loading the CareerVillage dataset in
 ## Pre-requisities to run this application
 - Installed and running instance of MySQL server (tested on version 8.0.32)
 - Python (tested on version 3.9.13)
-- Python library: mysql-connector-python
+- Python packages:
+    - mysql-connector-python
+    - python-dotenv
 - all csv files of the dataset in the same directory as this readme
 
 
